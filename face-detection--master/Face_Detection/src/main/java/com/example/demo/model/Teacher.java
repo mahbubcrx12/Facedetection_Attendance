@@ -25,7 +25,7 @@ public class Teacher {
 	private String lastName;
 	private String email;
 	private String mobile;
-	private String departmanet;
+	private String department;
 	private String password;
 	
 	private Date tx_created_date;
@@ -33,7 +33,7 @@ public class Teacher {
     private Date tx_deleteDate;
 	
     @ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "create_teacher_role", joinColumns = @JoinColumn(name = "teacher_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+	@JoinTable(name = "teacher_role", joinColumns = @JoinColumn(name = "teacher_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles;
 	
 	public int getTeacherId() {
@@ -42,11 +42,12 @@ public class Teacher {
 	public void setTeacherId(int teacherId) {
 		this.teacherId = teacherId;
 	}
-	public String getDepartmanet() {
-		return departmanet;
+	
+	public String getDepartment() {
+		return department;
 	}
-	public void setDepartmanet(String departmanet) {
-		this.departmanet = departmanet;
+	public void setDepartment(String department) {
+		this.department = department;
 	}
 	public String getUserName() {
 		return userName;

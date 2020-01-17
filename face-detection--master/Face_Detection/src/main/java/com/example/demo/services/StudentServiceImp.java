@@ -6,12 +6,13 @@ import java.util.HashSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.model.Role;
 import com.example.demo.model.Student;
 import com.example.demo.repository.RoleRepository;
 import com.example.demo.repository.StudentRepository;
-
+@Service
 public class StudentServiceImp implements StudentService{
 	
 	 @Autowired

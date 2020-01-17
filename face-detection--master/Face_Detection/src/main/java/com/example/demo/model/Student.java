@@ -32,7 +32,7 @@ public class Student {
     private Date tx_deleteDate;
 	
 	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "create_teacher_role", joinColumns = @JoinColumn(name = "student_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+	@JoinTable(name = "student_role", joinColumns = @JoinColumn(name = "student_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles;
 	
 	
