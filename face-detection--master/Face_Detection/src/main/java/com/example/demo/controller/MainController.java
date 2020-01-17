@@ -14,10 +14,16 @@ public class MainController {
 	
 	@Autowired
 	private ViewService viewService;
-	@RequestMapping(value = "/register", method = RequestMethod.GET)
-	public String studentRegister() {
-		return null;
+	
+	@RequestMapping(value = "/Teacher-register", method = RequestMethod.GET)
+	public ModelAndView teacherRegister() {
+		return viewService.teacherReg();
 	
 	}	
 
+	@RequestMapping(value = "/Student-register", method = RequestMethod.GET)
+	public ModelAndView studentRegister() {
+		return viewService.studentReg();
+	
+	}	
 }
